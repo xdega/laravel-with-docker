@@ -1,5 +1,5 @@
 # Laravel With Docker
-Clean install of Laravel, with support for Docker. Simply run ` sudo docker-compose up` from the project root.
+Clean install of Laravel **5.4**, with support for Docker. Simply run ` sudo docker-compose up` from the project root.
 
 # Environment Settings
 
