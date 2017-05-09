@@ -2,7 +2,7 @@
 Clean install of Laravel **5.4**, with support for Docker. Simply run ` sudo docker-compose up` from the project root.
 
 ### Note
-The node_modules, and vendor directories are not being tracked. This is by design. You must run `composer install` and `npm install` to pull in your dependencies. You can install these tools locally, or add them to the build script at `./deploy/web.docker`. More documentation and instruction on this to come in the near future.
+The **node_modules**, and **vendor** directories are not being tracked. This is by design. You must run `composer install` and `npm install` from your project root to pull in your dependencies. You can install these tools locally (recomended), or add them to the build script at `./deploy/web.docker` and access them from inside the web container. More documentation and instruction on this to come in the near future.
 
 # Environment Settings
 
