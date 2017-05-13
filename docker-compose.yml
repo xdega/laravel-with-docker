@@ -19,25 +19,22 @@ services:
         environment:
             - "DB_PORT=3306"
             - "DB_HOST=database"
-            - "REDIS_PORT=6379"
-            - "REDIS_HOST=cache"
         networks:
             - app-network
     database:
         image: mysql:5.6
         environment:
-            - "MYSQL_ROOT_PASSWORD=secret"
-            - "MYSQL_DATABASE=dockerApp"
+            - "MYSQL_ROOT_PASSWORD=guest"
+            - "MYSQL_DATABASE=interlight"
         ports:
             - "33061:3306"
         networks:
             - app-network
-    cache:
-        image: redis:3.0
-        ports:
-            - "63791:6379"
-        networks:
-            - app-network
+    composer:
+        image: composer/composer
+        volumes_from: 
+            - web
+        working_dir: /var/www
 networks:
     app-network:
         driver: bridge
