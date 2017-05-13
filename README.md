@@ -1,12 +1,16 @@
 # Laravel With Docker
 Clean install of Laravel **5.4**, with support for Docker. Simply run ` sudo docker-compose up` from the project root.
 
-### Note
+### Installing Dependencies
 The **node_modules**, and **vendor** directories are not being tracked. This is by design. You must run the following commands, to pull in your dependencies, before you begin working:
 - `docker-compose run composer install `
 - `docker-compose run app npm install`
 
 You can install Composer and Node tools locally and run them natively if you wish.
+
+### Other Helpful Commands
+To run php artisan:
+- `docker-compose run app php artisan`
 
 # Environment Settings
 
