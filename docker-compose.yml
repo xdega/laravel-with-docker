@@ -25,7 +25,7 @@ services:
         image: mysql:5.6
         environment:
             - "MYSQL_ROOT_PASSWORD=guest"
-            - "MYSQL_DATABASE=interlight"
+            - "MYSQL_DATABASE=laravel_app"
         ports:
             - "33061:3306"
         networks:
