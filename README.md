@@ -3,10 +3,10 @@ Clean install of Laravel **5.4**, with support for Docker. Simply run ` sudo doc
 
 ### Note
 The **node_modules**, and **vendor** directories are not being tracked. This is by design. You must run the following commands, to pull in your dependencies, before you begin working:
-- `composer install`
+- `docker-compose run composer install `
 - `npm install`
 
-You can install these tools locally (recomended), or add them to the build script at `./deploy/web.docker` and access them from inside the web container. More documentation and instruction on this to come in the near future.
+You can install Composer and Node tools locally and run them natively if you wish.
 
 # Environment Settings
 
@@ -21,22 +21,8 @@ APP_URL=http://localhost:8080
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=33061
-DB_DATABASE=dockerApp
+DB_DATABASE=laravel_app
 DB_USERNAME=root
-DB_PASSWORD=secret
+DB_PASSWORD=guest
 
-CACHE_DRIVER=redis
-SESSION_DRIVER=file
-QUEUE_DRIVER=sync
-
-REDIS_HOST=127.0.0.1
-REDIS_PASSWORD=null
-REDIS_PORT=63791
-
-MAIL_DRIVER=smtp
-MAIL_HOST=mailtrap.io
-MAIL_PORT=2525
-MAIL_USERNAME=null
-MAIL_PASSWORD=null
-MAIL_ENCRYPTION=null
 ```
