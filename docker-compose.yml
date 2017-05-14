@@ -22,7 +22,7 @@ services:
         networks:
             - app-network
     database:
-        image: mysql:5.6
+        image: mysql:latest
         environment:
             - "MYSQL_ROOT_PASSWORD=guest"
             - "MYSQL_DATABASE=laravel_app"
