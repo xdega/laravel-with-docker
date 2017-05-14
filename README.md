@@ -14,7 +14,7 @@ To run php artisan:
 
 # Environment Settings
 
-The following environment variables must be set. This will probably be added to the docker-compose script in the future, but until then the following .env should be placed in your project root:
+The following environment variables must be set. The following .env file should be placed in your project root:
 ```
 APP_ENV=local
 APP_KEY=base64:0/RLFKE+S8qQlhsVab8TVNSKFy4/y+xAtbuIWVwi6IA=
