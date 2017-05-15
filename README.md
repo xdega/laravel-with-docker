@@ -1,5 +1,8 @@
 # Laravel With Docker
-Clean install of Laravel **5.4**, with support for Docker. Simply run ` sudo docker-compose up` from the project root.
+Clean install of Laravel **5.4**, with support for Docker. Simply run `docker-compose up -d` from the project root and visit `localhost:8080` to view your project
+
+### Getting Started Guide
+https://medium.com/@xdega_/getting-started-with-laravel-and-docker-50ab7b2a1ae2
 
 ### Installing Dependencies
 The **node_modules**, and **vendor** directories are not being tracked. This is by design. You must run the following commands, to pull in your dependencies, before you begin working:
