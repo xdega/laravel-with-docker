@@ -8,8 +8,6 @@ services:
             - ./:/var/www
         ports:
             - "8080:80"
-        networks:
-            - app-network
     app:
         build:
             context: ./
@@ -19,8 +17,6 @@ services:
         environment:
             - "DB_PORT=3306"
             - "DB_HOST=database"
-        networks:
-            - app-network
     database:
         image: mysql:latest
         environment:
@@ -28,13 +24,8 @@ services:
             - "MYSQL_DATABASE=laravel_app"
         ports:
             - "33061:3306"
-        networks:
-            - app-network
     composer:
         image: composer/composer
         volumes_from: 
             - web
         working_dir: /var/www
-networks:
-    app-network:
-        driver: bridge
