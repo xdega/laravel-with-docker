@@ -3,7 +3,7 @@ services:
     web:
         build:
             context: ./
-            dockerfile: deploy/web.docker
+            dockerfile: deploy/web.dockerfile
         volumes:
             - ./:/var/www
         ports:
@@ -11,7 +11,7 @@ services:
     app:
         build:
             context: ./
-            dockerfile: deploy/app.docker
+            dockerfile: deploy/app.dockerfile
         volumes:
             - ./:/var/www
         environment:
