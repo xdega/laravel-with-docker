@@ -1,8 +1,17 @@
 #!/bin/bash -e
 
+# Set appropriate permissions for storage directory
+sudo chmod -R gu+w storage
+sudo chmod -R guo+w storage
+
+# Fire up Docker
 docker-compose up -d
+
+# Pull in dependencies
 docker-compose run composer install
 docker-compose run app npm install
+
+# Create environment configuration
 cat << 'EOF' >> .env
 APP_ENV=local
 APP_KEY=
@@ -16,4 +25,6 @@ DB_DATABASE=laravel_app
 DB_USERNAME=root
 DB_PASSWORD=guest
 EOF
+
+# Generate encryption key for application
 docker-compose run app php artisan key:generate
