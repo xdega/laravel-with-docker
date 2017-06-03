@@ -1,7 +1,16 @@
 # Laravel With Docker
 Clean install of Laravel **5.4**, with support for Docker. Simply run `docker-compose up -d` from the project root and visit `localhost:8080` to view your project
 
-### Getting Started Guide
+### Quickstart 
+We have a handy-dandy script to get you up-and-running in no time. Simply run one of the following scripts from your project root:
+
+## Linux/OSX
+`sudo ./script/bootstrap`
+
+## Windows (Powershell)
+`./script/bootstrap.ps1`
+
+### Getting Started Guide (Blog)
 https://medium.com/@xdega_/getting-started-with-laravel-and-docker-50ab7b2a1ae2
 
 ### Installing Dependencies
@@ -14,22 +23,3 @@ You can install Composer and Node tools locally and run them natively if you wis
 ### Other Helpful Commands
 To run php artisan:
 - `docker-compose run app php artisan`
-
-# Environment Settings
-
-The following environment variables must be set. The following .env file should be placed in your project root:
-```
-APP_ENV=local
-APP_KEY=base64:0/RLFKE+S8qQlhsVab8TVNSKFy4/y+xAtbuIWVwi6IA=
-APP_DEBUG=true
-APP_LOG_LEVEL=debug
-APP_URL=http://localhost:8080
-
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=33061
-DB_DATABASE=laravel_app
-DB_USERNAME=root
-DB_PASSWORD=guest
-
-```
