@@ -5,7 +5,7 @@ chmod -R gu+w storage
 chmod -R guo+w storage
 
 # Fire up Docker
-docker-compose up -d
+docker-compose up -d --build
 
 # Pull in dependencies
 docker-compose run composer install
@@ -27,7 +27,7 @@ DB_PASSWORD=guest
 EOF
 
 # Set permissions for .env
-chmod 770 .env
+chmod 775 .env
 
 # Generate encryption key for application
 docker-compose run app php artisan key:generate
