@@ -10,13 +10,13 @@ We have a handy-dandy script to get you up-and-running in no time. Simply run on
 ### Windows (Powershell)
 `./script/bootstrap.ps1`
 
-## Getting Started Guide (Blog)
-https://medium.com/@xdega_/getting-started-with-laravel-and-docker-50ab7b2a1ae2
 
 ## Installing Dependencies
 The **node_modules**, and **vendor** directories are not being tracked. This is by design. You must run the following commands, to pull in your dependencies, before you begin working:
 - `docker-compose run composer install `
 - `docker-compose run app npm install`
+
+**Note:** The above commands are part of the bootsrap scrtipt.
 
 You can install Composer and Node tools locally and run them natively if you wish.
 
