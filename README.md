@@ -1,5 +1,5 @@
 # Laravel With Docker
-Clean install of Laravel **5.4**, with support for Docker. Simply run `docker-compose up -d` from the project root and visit `localhost:8080` to view your project
+Clean install of Laravel **5.4**, with support for Docker. Simply run `docker-compose up -d` from the project root and visit `localhost:8080` to view your project. This is designed to be a lightweight, virtual-container based, implementation. As opposed to other attempts which may be more "bloated" in an attempt to replicate a full virtual machine.
 
 ## Quickstart 
 We have a handy-dandy script to get you up-and-running in no time. Simply run one of the following scripts from your project root:
